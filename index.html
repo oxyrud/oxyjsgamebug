@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>JS Game Bug</title>
+    	<link rel="stylesheet" href="css/style.css">
+    	<link rel="stylesheet" href="css/fonts.css">
+    	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+    </head>
+    <body>
+        <div class="main">
+    	    <h1 class="title">Выберите уровень сложности:</h1>
+    	    <p class="discr">Выберите сложность и игра начнется. Чем выше уровень - тем больше будет выборка карт.</p>
+            <div class="level">
+                <h2 class="subtitle" id="easy">Простой</h2>
+            </div>
+            <div class="level">
+                <h2 class="subtitle" id="medium">Средний</h2>
+            </div>
+            <div class="level">
+                <h2 class="subtitle" id="hard">Сложный</h2>
+            </div>
+            <div class="start">
+                <button>Начать игру</button>
+            </div>
+            <div class="wrapcard wrapcard__first">
+                <img class="card" src="images/cardback.png" alt="Card">
+            </div>
+            <div class="wrapcard wrapcard__second">
+                <img class="card" src="images/cardback.png" alt="Card">
+            </div>
+        </div>
+        <div class="gametable">
+        </div>
+    </body>    
+    <script src='script.js' type="text/javascript"></script>
+    </html>
