@@ -1,10 +1,14 @@
 body {
   margin: 0;
+  max-width: 1440px;
+  max-height: 1024px;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url(../images/Background.png);
   font-family: RobotoBold;
   color: #FFF;
+  display: flex;
+  
 }
  
 h1,h2,p {
@@ -14,8 +18,9 @@ h1,h2,p {
 
 h1 {
   font-size: 57px;
-  padding-top: 129px;
+  padding-top: 120px;
   padding-left: 103px;
+
 }
 
 p {
@@ -29,16 +34,20 @@ h2 {
   position: relative;
   font-size: 50px;
   padding-left: 45px;
+
 }
 
 h2:hover{
   color: #81F7D8;
+
 }
 
-.start{
+.main__start{
   padding-top: 80px;
   padding-left: 100px;
+
 }
+
 button {
   font-size: 32px;
   background: #D62B2E;
@@ -48,43 +57,32 @@ button {
   text-align: center;
   position: absolute;
   color: #FFF;
+  cursor: pointer;
+
 }
 
-.level {
+.main__level {
   display: flex;
   align-items: center;
   padding-left: 103px;
   padding-bottom: 25px;
+  cursor: pointer;
 
 }
-
- .push {
-  padding-left: 103px;
-  padding-top: 85px;
-
- }
 
  .wrapcard__first {
   position: absolute;
   transform: rotate(11.9deg);
-  right: 23%;
+  right: 22%;
   top: 60%;
   
 }
 
-.wrapcard__first:hover {
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-}
 .wrapcard__second {
   position: absolute;
   transform: rotate(39.26deg);
   right: 10%;
-  top: 64%;
-
-}
-
-.wrapcard__second:hover{
-  box-shadow: -2px 0px 1px rgba(0,0,0.3);
+  top: 62%;
 
 }
 
@@ -99,23 +97,27 @@ button {
   top: 20px;
   left: 0;
   margin-right: 10px;
+
 }
 
 .hidden {
   display: none;
 
 }
+
 .cardwrap{
   justify-content: space-between;
   align-items: center;
   margin-right: 24px;
   margin-bottom: 24px;
-  width:220px ;
+  width:218px ;
   height:340px ;
   transform-style: preserve-3d;
   transition: transform .5s;
   position: relative;
+
 }
+
 .cardback{
   position: absolute;
   background-image: url(../images/cardback.png);
@@ -152,8 +154,13 @@ button {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  max-width: 850px;
+  
+}
+
+.gametable__six {
+  width: 850px;
 
 }
 
@@ -164,15 +171,121 @@ button {
 
 .bug {
   background-image: url(../images/bug.png);
+
 }
 
-@media (max-width: 950px ) {
-  .wrapcard__first,.wrapcard__second {
-    display: none;
+@media (max-width: 1300px){
+
+  .gametable__six {
+    width: 600px;
+
+  }
+
+  .gametable__ten {
+    width: 1020px;
+
+  }
+
+  .cardwrap{
+    width: 175px;
+    height: 272px;
+
   }
 
 }
 
-@media (max-width: ) {
+@media (max-width: 1020px){
+
+  .main__wrapcard {
+    display: none;
+
+  }
+
+  h1,p {
+    padding-left: 45px;
+
+  }
+
+  .main__start{
+    padding-top: 0;
+    padding-left: 10px;
+
+  }
+
+  .gametable__six {
+    width: 530px;
+    
+  }
+
+  .gametable__ten {
+    width: 700px;
+
+  }
+
+  .cardwrap {
+    width: 109px;
+    height: 170px;
+
+  }
+  
+}
+
+@media (max-width: 700px ) {
+
+  h1 {
+    padding-top: 0;
+
+  }
+   
+   .gametable__six {
+    width: 300px;
+    
+  }
+
+  .gametable__ten {
+   width: 450px;
+
+  }
+  .cardwrap {
+    width: 65px;
+    height: 102px;
+  
+  }
 
 }
+
+@media (max-width: 450px ) {
+
+  h2 {
+    padding-left: 5px;
+
+  }
+  
+  p {
+    padding-bottom: 0;
+
+  }
+
+  .active::before {
+    left: -35px;
+
+  }
+
+  .gametable__six {
+    width: 200px;
+
+  }
+
+  .gametable__ten {
+   width: 300px;
+
+  }
+
+  .cardwrap {
+    width: 33px;
+    height: 51px;
+    
+  }
+
+} 
+

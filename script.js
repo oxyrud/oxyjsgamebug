@@ -1,10 +1,9 @@
-const start = document.querySelector('.start');
-const level = document.querySelectorAll('.subtitle');
+const start = document.querySelector('.main__start');
+const level = document.querySelectorAll('.main__subtitle');
 const gameTable = document.querySelector(".gametable");
 let selectLevel = (item) => {
 	level.forEach((item)=>item.classList.remove("active"));
 	item.target.classList.add("active");
-
 };
 
 level.forEach((item) => item.addEventListener('click',selectLevel ));
@@ -20,14 +19,17 @@ function getNumberOfCard () {
 	let idActiveLevel = showLevel();
 	let numberOfCards = 0;
 	switch(idActiveLevel){
-		case "easy":
-		    numberOfCards = 3;
-		break;
 		case "medium":
 		    numberOfCards = 6;
+		    gameTable.classList.add('gametable__six');
+		break;
+		case "hard":
+		    numberOfCards = 10;
+            gameTable.classList.add('gametable__ten');
 		break;
 		default:
-		    numberOfCards = 9;
+		    numberOfCards = 3;
+		    gameTable.classList.add('gametable__three');
 	}
     return numberOfCards;
 }
@@ -36,7 +38,6 @@ function getNumberOfCard () {
 function createGameTable(){
     let cards = getNumberOfCard ();       
     for (let i=0; i<cards; i++) {
-    	    
     	    let card = document.createElement("div");
     	    card.classList.add('cardwrap');
     	    gameTable.appendChild(card);
@@ -45,7 +46,7 @@ function createGameTable(){
     	    card.appendChild(cardback);
     	    let cardfront = document.createElement('div');
     	    cardfront.classList.add('cardfront');
-    	    card.appendChild(cardfront);   	    
+    	    card.appendChild(cardfront);
     }
 }
 
@@ -81,10 +82,9 @@ function goToStart(){
 
 const flippedCard = document.querySelectorAll('.gametable');
 let selectCard = (item) => {
-
     if (item.target.classList.value === 'cardback') {
-     item.target.parentElement.classList.add("onclick");
-     flippedCard.forEach((item) => item.addEventListener('click',goToStart))
+        item.target.parentElement.classList.add("onclick");
+        flippedCard.forEach((item) => item.addEventListener('click',goToStart))
     }  
 }
 
@@ -94,7 +94,8 @@ flippedCard.forEach((item) => item.addEventListener('click',selectCard));
 function goToStart(){
     document.querySelector('.main').classList.remove('hidden');
 	gameTable.innerHTML='';
-        flippedCard.forEach((item) => item.removeEventListener('click',goToStart))
+	gameTable.classList.remove('gametable__six','gametable__ten','gametable__three');
+    flippedCard.forEach((item) => item.removeEventListener('click',goToStart))
 }
 
 //запуск игры
@@ -102,8 +103,8 @@ function startGame() {
     getNumberOfCard();
 	createGameTable();
     document.querySelector('.main').classList.add('hidden');
-    getRandomCard();
-    
+    getRandomCard();    
 }
+
 start.addEventListener ('click', startGame);
 
