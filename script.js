@@ -1,6 +1,7 @@
 const start = document.querySelector('.main__start');
 const level = document.querySelectorAll('.main__subtitle');
 const gameTable = document.querySelector(".gametable");
+
 let selectLevel = (item) => {
 	level.forEach((item)=>item.classList.remove("active"));
 	item.target.classList.add("active");
@@ -62,22 +63,6 @@ function getRandomCard(){
         }
 }
 
-// переворот карты
-/*const flippedCard = document.querySelectorAll('.gametable');
-console.log(flippedCard);
-let selectCard = (item) => {
-     item.target.parentElement.classList.add("onclick");
-     flippedCard.forEach((item) => item.addEventListener('click',goToStart))   
-}
-flippedCard.forEach((item)=> item.addEventListener('click',selectCard));
-
-// подготовка к следующему запуску игры
-function goToStart(){
-    window.location.reload();	
-}
-*/
-
-//ДРУГОЙ ВАРИАНТ
 // переворот карты
 
 const flippedCard = document.querySelectorAll('.gametable');
