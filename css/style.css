@@ -16,14 +16,14 @@ h1,h2,p {
 
 h1 {
   font-size: 57px;
-  padding-top: 184px;
-  padding-left: 133px;
+  padding-top: 131px;
+  padding-left: 103px;
 
 }
 
 p {
   font-size: 19px;
-  padding-left: 136px;
+  padding-left: 107px;
   padding-bottom: 65px;
 
 }
@@ -42,7 +42,7 @@ h2:hover {
 
 .main__start {
   padding-top: 90px;
-  padding-left: 131px;
+  padding-left: 101px;
 
 }
 
@@ -67,7 +67,7 @@ button:hover {
 .main__level {
   display: flex;
   align-items: center;
-  padding-left: 139px;
+  padding-left: 108px;
   padding-bottom: 23px;
   cursor: pointer;
 
@@ -76,16 +76,16 @@ button:hover {
  .wrapcard__first {
   position: absolute;
   transform: rotate(11.9deg);
-  right: 35%;
-  top: 50%;
+  right: 37%;
+  top: 45%;
   
 }
 
 .wrapcard__second {
   position: absolute;
   transform: rotate(39.26deg);
-  right: 24%;
-  top: 52%;
+  right: 26%;
+  top: 47%;
 
 }
 
@@ -272,6 +272,11 @@ button:hover {
   
   p {
     padding-bottom: 0;
+
+  }
+  
+  .main__level {
+    padding-left: 80px;
 
   }
 
