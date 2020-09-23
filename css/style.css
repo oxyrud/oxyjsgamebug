@@ -111,8 +111,8 @@ button:hover {
 .cardwrap{
   justify-content: space-between;
   align-items: center;
-  margin-right: 24px;
-  margin-bottom: 24px;
+  margin-right: 12px;
+  margin-right: : 12px;
   width:218px ;
   height:340px ;
   transform-style: preserve-3d;
