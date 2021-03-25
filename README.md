@@ -1,1 +1,1 @@
-game find bug https://oxyrud.github.io/oxyjsgamebug/
+game find the bug https://oxyrud.github.io/oxyjsgamebug/
